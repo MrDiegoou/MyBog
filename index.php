@@ -50,41 +50,75 @@ require_once('./config/conexion.php');
             </div>
         </nav>
         <div class="container mt-4">
-    <div class="row align-items-center">
-        <div class="col-12 mt-4">
-            <div class="busqueda">
-                <input type="text" id="searchInput" name="searchInput" class="form-control" placeholder="Buscar">
-                <ul id="searchResult"></ul>
-            </div>
-        </div>
-        <div class="col-md-6 order-md-1">
-            <div id="carousel-container" style="border: 2px solid black; border-radius: 20px; ">
-                <button id="prev-btn" style="background-color: transparent; color:transparent;">&lt;</button>
-                <div id="image-slider"> 
-                    <a class="slide" href="./resultado.php?tabla=discotecas&nombre=ADN+Disco+Bar"><img src="Imagenes/discotecas/ADN Disco Bar.jpg" alt="Image 1"></a>
-                    <a class="slide" href="./"><img src="Imagenes/discotecas/Bar Del Futbol Y La Pola.jpg" alt="Image 2"></div>
-                    <a class="slide" href="./resultado.php?tabla=discotecas&nombre=Añejos+bar"><img src="Imagenes/discotecas/Añejos bar.jpg" alt="Image 3"></a>
-                    <a class="slide" href="./"><img src="Imagenes/estadios/Atahualpa.jpg" alt="Image 4"></a>
-                    <a class="slide" href="./"><img src="Imagenes/imagen de lugares/campin.jpeg" alt="Image 5"></a>
-                    <a class="slide" href="./"><img src="Imagenes/parques/Parque de la 93.jpg" alt="Image 6"></a>
-                    <a class="slide" href="./"><img src="Imagenes/parques/Parque El Virrey.jpg" alt="Image 7"></a>
-                    <a class="slide" href="./"><img src="Imagenes/discotecas/Suramerika BAR.jpg" alt="Image 8"></a>
-                    <a class="slide" href="./"><img src="Imagenes/discotecas/Triunfo bar jl.jpg" alt="Image 9"></a>
-                    <a class="slide" href="./"><img src="Imagenes/discotecas/Con Esto Tengo Bar.jpg" alt="Image 10"><a>
+            <div class="row align-items-center">
+                <div class="col-12 mt-4">
+                    <div class="busqueda">
+                        <input type="text" id="searchInput" name="searchInput" class="form-control"
+                            placeholder="Buscar">
+                        <ul id="searchResult"></ul>
+                    </div>
                 </div>
-                <button id="next-btn" style="background-color: transparent; color:transparent;">&gt;</button>
+                <div class="col-md-6 order-md-1">
+                    <div id="carousel-container" style="border: 2px solid black; border-radius: 20px; ">
+                        <button id="prev-btn" style="background-color: transparent;">&lt;</button>
+                        <div id="image-slider">
+                            <div class="slide" data-url="./resultado.php?tabla=discotecas&nombre=ADN+Disco+Bar"><img
+                                    src="Imagenes/discotecas/ADN Disco Bar.jpg" alt="Image 1"
+                                    onclick="redirectToPage('./resultado.php?tabla=discotecas&nombre=ADN+Disco+Bar')">
+                            </div>
+                            <div class=" slide"
+                                data-url="./resultado.php?tabla=discotecas&nombre=Bar+Del+Futbol+Y+La+Pola"><img
+                                    src="Imagenes/discotecas/Bar Del Futbol Y La Pola.jpg" alt="Image 2"
+                                    onclick="redirectToPage('./resultado.php?tabla=discotecas&nombre=Bar+Del+Futbol+Y+La+Pola')">
+                            </div>
+                            <div class=" slide" data-url="./resultado.php?tabla=discotecas&nombre=Añejos+bar"><img
+                                    src="Imagenes/discotecas/Añejos bar.jpg" alt="Image 3"
+                                    onclick="redirectToPage('./resultado.php?tabla=discotecas&nombre=Añejos+bar')">
+                            </div>
+                            <div class=" slide" data-url="./resultado.php?tabla=estadios&nombre=Atahualpa"><img
+                                    src="Imagenes/estadios/Atahualpa.jpg" alt="Image 4"
+                                    onclick="redirectToPage('./resultado.php?tabla=estadios&nombre=Atahualpa')"></div>
+                            <div class=" slide"
+                                data-url="./resultado.php?tabla=estadios&nombre=Nemesio+Camacho+El+Campín"><img
+                                    src="Imagenes/imagen de lugares/campin.jpeg" alt="Image 5"
+                                    onclick="redirectToPage('./resultado.php?tabla=estadios&nombre=Nemesio+Camacho+El+Campín')">
+                            </div>
+                            <div class=" slide" data-url="./resultado.php?tabla=parques&nombre=Parque+de+la+93"><img
+                                    src="Imagenes/parques/Parque de la 93.jpg" alt="Image 6"
+                                    onclick="redirectToPage('./resultado.php?tabla=parques&nombre=Parque+de+la+93')">
+                            </div>
+                            <div class=" slide" data-url="./resultado.php?tabla=parques&nombre=Parque+El+Virrey"><img
+                                    src="Imagenes/parques/Parque El Virrey.jpg" alt="Image 7"
+                                    onclick="redirectToPage('./resultado.php?tabla=parques&nombre=Parque+El+Virrey')">
+                            </div>
+                            <div class=" slide" data-url="./resultado.php?tabla=discotecas&nombre=Suramerika+BAR"><img
+                                    src="Imagenes/discotecas/Suramerika BAR.jpg" alt="Image 8"
+                                    onclick="redirectToPage('./resultado.php?tabla=discotecas&nombre=Suramerika+BAR')">
+                            </div>
+                            <div class=" slide" data-url="./resultado.php?tabla=discotecas&nombre=Triunfo+Bar+JL"><img
+                                    src="Imagenes/discotecas/Triunfo bar jl.jpg" alt="Image 9"
+                                    onclick="redirectToPage('./resultado.php?tabla=discotecas&nombre=Triunfo+Bar+JL')">
+                            </div>
+                            <div class=" slide" data-url="./resultado.php?tabla=discotecas&nombre=Con+Esto+Tengo+Bar">
+                                <img src="Imagenes/discotecas/Con Esto Tengo Bar.jpg" alt="Image 10"
+                                    onclick="redirectToPage('./resultado.php?tabla=discotecas&nombre=Con+Esto+Tengo+Bar')">
+                            </div>
+                        </div>
+                        <button id="next-btn" style="background-color: transparent;">&gt;</button>
+
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-2">
+                    <div class="palabra_clave">
+                        <p>EN <strong class="strong1"> MYBOG </strong> ENCUENTRAS <br> LOS MEJORES
+                            LUGARES <br> PARA VISITAR Y DISFRUTAR <br> DE <strong class="strong2"> BOGOTÁ
+                            </strong> DE LA MEJOR
+                            <br> MANERA.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-md-6 order-md-2">
-            <div class="palabra_clave">
-                <p>EN <strong class="strong1"> MYBOG </strong> ENCUENTRAS <br> LOS MEJORES
-                    LUGARES <br> PARA VISITAR Y DISFRUTAR <br> DE <strong class="strong2"> BOGOTÁ </strong> DE LA MEJOR
-                    <br> MANERA.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
     </div>
     <br><br><br><br><br><br><br><br><br><br>
     <?php
@@ -189,7 +223,12 @@ require_once('./config/conexion.php');
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./Funcionamiento_por_js/editar_usuario.js"></script>
-
+    <script>
+        function redirectToPage(url) {
+            // Redirigir a la URL específica cuando se hace clic en la imagen
+            window.location.href = url;
+        }
+    </script>
     <script>
         // Cuando el documento está completamente cargado
         $(document).ready(function () {
@@ -223,48 +262,55 @@ require_once('./config/conexion.php');
 
 </html>
 
-       
-    
+
+
 <style>
-     #carousel-container {
-            width: 100%;
-            margin: auto;
-            overflow: hidden;
-            position: relative;
-        }
+    #carousel-container {
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+    }
 
-        #image-slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
+    #image-slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
 
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-            overflow: hidden;
-        }
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
 
-        .slide img {
-            width: 600px;
-            height: 350px;
-            object-fit: cover;
-        }
+    .slide img {
+        width: 600px;
+        height: 350px;
+        object-fit: cover;
+    }
 
-        #prev-btn, #next-btn {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 18px;
-            color: white;
-            background-color: white;
-            border: none;
-            padding: 8px;
-            z-index: 1;
-        }
+    #prev-btn,
+    #next-btn {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: white;
+        background-color: white;
+        border: none;
+        padding: 8px;
+        z-index: 1;
+    }
 
-        #prev-btn { left: 10px; }
-        #next-btn { right: 10px; }
+    #prev-btn {
+        left: 10px;
+    }
+
+    #next-btn {
+        right: 10px;
+    }
+
     .toast-header {
         color: red;
         background-color: #f5f5f5;

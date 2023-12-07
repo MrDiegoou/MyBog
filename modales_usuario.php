@@ -4,13 +4,12 @@
 if (isset($_SESSION['user_id'])) {
     echo <<<HTML
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+            <a class="nav-link dropdown-toggle" style="transform: translate(0%, 10%);" href="#" id="userDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src="./Imagenes/usuario.png" alt="Imagen de perfil" width="32" height="32"> 
+                <span class="user-info-container nombreUsuario" style="padding:10px; color: white;">{$_SESSION['nombres']}</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="userDropdown" style="text-align: center; margin-left: -40px; margin-top:10px;">
-                <span class="user-info-container nombreUsuario" style="background-color: a; color: white;">{$_SESSION['nombres']}</span>
-                <br>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#EditarDatos">Editar Usuario</a>
                 <div class="dropdown-divider"></div>
@@ -266,7 +265,8 @@ HTML;
         cursor: pointer;
         border-bottom: solid 1px rgba(255, 0, 0, 0.9);
         background-color: rgba(255, 0, 0, 0.6);
-        box-shadow: 0 0 2px #ff0000, 0 0 2px #ff0000, 0 0 2px #ff0202, 0 0 0px #ff0000
+        box-shadow: 0 0 2px #ff0000, 0 0 2px #ff0000, 0 0 2px #ff0202, 0 0 0px #ff0000;
+        
     }
 
     .modal-header {

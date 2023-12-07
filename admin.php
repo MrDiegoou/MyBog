@@ -199,7 +199,7 @@ if(isset($_GET['cambiarRol']) && isset($_GET['idUsuario']) && isset($_GET['nuevo
             <!-- Modal con la tabla de usuarios -->
             <div class="modal fade" id="modalUsuarios" tabindex="-1" role="dialog" aria-labelledby="modalUsuariosLabel"
                 aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="modalUsuariosLabel">Lista de Usuarios</h5>
@@ -264,7 +264,7 @@ if(isset($_GET['cambiarRol']) && isset($_GET['idUsuario']) && isset($_GET['nuevo
             <!-- Modal con la tabla de establecimientos -->
             <div class="modal fade" id="modalEstablecimientos" tabindex="-1" role="dialog"
                 aria-labelledby="modalEstablecimientosLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="modalEstablecimientosLabel">Lista de Establecimientos Pendientes
@@ -343,7 +343,7 @@ if(isset($_GET['cambiarRol']) && isset($_GET['idUsuario']) && isset($_GET['nuevo
         <!-- Modal con la tabla de establecimientos -->
         <div class="modal fade" id="modalActivosEstablecimientos" tabindex="-1" role="dialog"
             aria-labelledby="modalEstablecimientosLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="modalEstablecimientosLabel">Lista de Establecimientos Activos
@@ -448,7 +448,7 @@ if(isset($_GET['cambiarRol']) && isset($_GET['idUsuario']) && isset($_GET['nuevo
     </div>
     <div class="modal fade" id="modalActivosEstablecimientos" tabindex="-1" role="dialog"
         aria-labelledby="modalEstablecimientosLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalEstablecimientosLabel">Lista de Establecimientos Activos

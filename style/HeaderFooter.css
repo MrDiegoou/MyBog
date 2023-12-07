@@ -120,7 +120,12 @@ html, body {
     
 }
 
-
+#mapa {
+    transform: translate(0%, 10%);
+}
+#calendario {
+    transform: translate(0%, 10%);
+}
 .close {
     border: none;
     background-color: transparent;

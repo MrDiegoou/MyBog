@@ -88,12 +88,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <div class="form-group mb-2">
                                         <label for="title" class="control-label">Nombre</label>
                                         <input type="text" class="form-control form-control-sm rounded-0" name="title"
-                                            id="title" required>
+                                        pattern="[^;:]*" id="title" required>
                                     </div>
                                     <div class="form-group mb-2">
                                         <label for="description" class="control-label">Descripción</label>
                                         <textarea rows="3" class="form-control form-control-sm rounded-0"
-                                            name="description" id="description" required></textarea>
+                                        pattern="[^;:]*" name="description" id="description" required></textarea>
                                     </div>
                                     <div class="form-group mb-2">
                                         <label for="start_datetime" class="control-label">Inicio</label>

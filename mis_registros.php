@@ -114,7 +114,7 @@ $result = $stmt->get_result();
                 </div>
             </div>
         </nav>
-        <div class="container mt-5">
+        <div class="contenedor">
             <h1 class="mb-4">Mis Registros de Establecimientos</h1>
 
             <div class="table-responsive">
@@ -200,7 +200,7 @@ $result = $stmt->get_result();
             </div>
         </div>
     </div>
-<br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
     <?php
     include('modales_footer.php');
 
@@ -261,3 +261,11 @@ $result = $stmt->get_result();
         $('#registroIdInput').val(registroId);
     });
 </script>
+<style>
+    .contenedor{
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: max-content;
+    }
+</style>
